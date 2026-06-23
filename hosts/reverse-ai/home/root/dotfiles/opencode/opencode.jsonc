@@ -1,0 +1,64 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama (local)",
+      "options": {
+        "baseURL": "http://localhost:11434/v1"
+      },
+      "models": {
+        "qwen3:30b": {
+          "name": "qwen3:30b",
+          "tool_call": true
+        },
+        "qwen3-coder:30b": {
+          "name": "qwen3-coder:30b",
+          "tool_call": true
+        },
+        "gpt-oss:20b": {
+          "name": "gpt-oss:20b",
+          "tool_call": true
+        }
+      }
+    }
+  },
+  "permission": {
+    "*": "allow",
+    "external_directory": "allow",
+    "doom_loop": "allow"
+  },
+  "mcp": {
+    "radare2": {
+      "type": "local",
+      "command": ["r2mcp", "-n"],
+    },
+    // "radare2": {
+    //   "type": "local",
+    //   "command": ["nix", "run", "github:Yunor743/radare2-mcp.nix", "--", "-n"],
+    // },
+    // "nixos": {
+    //   "type": "local",
+    //   "command": ["nix", "run", "github:utensils/mcp-nixos", "--"],
+    //   "enabled": true
+    // },
+    // "playwright": {
+    //   "type": "local",
+    //   "command": ["nix", "run", "nixpkgs#playwright-mcp", "--", "--user-data-dir", "/tmp/playwright-mcp-profile"]
+    // },
+    // "memory": {
+    //   "type": "local",
+    //   "command": ["nix", "run", "nixpkgs#mcp-server-memory"],
+    //   "environment": {
+    //     "MEMORY_FILE_PATH": "/home/talion/.local/share/mcp-memory/memory.jsonl"
+    //   }
+    // },
+    // "tmux": {
+    //   "type": "local",
+    //   "command": ["/home/talion/.local/bin/tmux-mcp-rs-wrapper"],
+    //   "environment": {
+    //     "PATH": "/run/current-system/sw/bin:/usr/bin:/bin"
+    //   }
+    // }
+  }
+}

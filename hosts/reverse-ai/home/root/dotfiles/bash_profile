@@ -1,0 +1,12 @@
+
+cd /shared
+
+echo "You have 2sec to press Ctrl+C and drop in a bash shell"
+echo "After this delay opencode will be launched"
+
+# trap 'exit 0' INT
+for i in 1 2 3 4 5; do
+  sleep 2
+  opencode && shutdown now
+done
+
