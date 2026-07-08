@@ -17,6 +17,10 @@ nix run github:Yunor743/reverse.ai#reverse-ai
 sudo docker run -v $(pwd):/workspace -w /workspace --rm -it --device /dev/kvm --privileged nixos/nix nix run --extra-experimental-features 'nix-command flakes' github:Yunor743/reverse.ai#reverse-ai
 ```
 
+The app boots the MicroVM headless and connects you via SSH on `localhost:2222` for a smooth interactive session.
+Type `exit` to leave; the VM shuts down automatically.
+Boot logs are kept under `$TMPDIR/reverse-ai-<pid>-boot.log` for debugging.
+
 ---
 
 ## Known issue
