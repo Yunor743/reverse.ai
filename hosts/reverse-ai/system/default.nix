@@ -38,6 +38,7 @@
     git
     pkg-config
     herdr
+    nodejs
   ];
 
   users.users.root = {

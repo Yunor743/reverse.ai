@@ -15,7 +15,7 @@ SETUP_FILE="/tmp/stage-setup-done"
 
 if [[ ! -f "$SETUP_FILE" ]]; then
     herdr integration install opencode
-    npx skills add ogulcancelik/herdr --skill herdr -g &&
+    npx -y skills add ogulcancelik/herdr --skill herdr -y -g &&
     touch $SETUP_FILE
 fi
 
