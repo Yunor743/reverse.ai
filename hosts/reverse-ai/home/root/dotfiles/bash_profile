@@ -1,12 +1,23 @@
+#!/usr/bin/env bash
 
 cd /shared
 
-echo "You have 2sec to press Ctrl+C and drop in a bash shell"
-echo "After this delay opencode will be launched"
+# echo "You have 2sec to press Ctrl+C and drop in a bash shell"
+# echo "After this delay opencode will be launched"
+# 
+# # trap 'exit 0' INT
+# for i in 1 2 3 4 5; do
+#   sleep 2
+#   opencode && shutdown now
+# done
 
-# trap 'exit 0' INT
-for i in 1 2 3 4 5; do
-  sleep 2
-  opencode && shutdown now
-done
+SETUP_FILE="/tmp/stage-setup-done"
+
+if [[ ! -f "$SETUP_FILE" ]]; then
+    herdr integration install opencode
+    npx skills add ogulcancelik/herdr --skill herdr -g &&
+    touch $SETUP_FILE
+fi
+
+herdr
 

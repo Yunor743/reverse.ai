@@ -37,6 +37,7 @@
     # nix
     git
     pkg-config
+    herdr
   ];
 
   users.users.root = {

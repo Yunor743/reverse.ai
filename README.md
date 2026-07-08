@@ -30,3 +30,9 @@ mkdir -p ~/tmp && cd ~/tmp
 
 # TODO
 - [ ] Add the following mcp : https://github.com/SEKOIA-IO/RePythonNET-MCP
+- [ ] Add radare2 wth plugins (r2ai, r2ghidra)
+- [ ] Install yara, yarax, yara-forge
+- [ ] Install Capa
+Behavior analysis
+- [ ] kunai / chainsaw / hayabusa / zircolite / 
+- [ ] emulators
