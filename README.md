@@ -27,3 +27,6 @@ Running from a DrvFs path (`/mnt/c/...`) fails because UNIX domain sockets aren'
 mkdir -p ~/tmp && cd ~/tmp
 # then run the docker command
 ```
+
+# TODO
+- [ ] Add the following mcp : https://github.com/SEKOIA-IO/RePythonNET-MCP
