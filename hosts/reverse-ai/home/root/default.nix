@@ -1,5 +1,7 @@
 {
   pkgs,
+  inputs,
+  system,
   ...
 }: {
   home.stateVersion = "26.05";
@@ -8,6 +10,8 @@
     radare2
     opencode
     neovim
+  ] ++ [
+    inputs.llm-agents.packages.${system}.oh-my-opencode
   ];
 
   home.file = {
@@ -16,6 +20,7 @@
       recursive = true;
     };
     ".config/opencode/opencode.jsonc".source = dotfiles/opencode/opencode.jsonc;
+    ".config/opencode/oh-my-openagent.jsonc".source = dotfiles/opencode/oh-my-openagent.jsonc;
     ".bash_profile".source = dotfiles/bash_profile;
   };
 

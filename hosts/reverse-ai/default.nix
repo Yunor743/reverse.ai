@@ -9,8 +9,10 @@
     ./system
   ];
 
+  nixpkgs.overlays = [ inputs.llm-agents.overlays.default ];
+
   home-manager = {
-    extraSpecialArgs = {inherit inputs;};
+    extraSpecialArgs = {inherit inputs system;};
     users = {
       root = import ./home/root;
     };
