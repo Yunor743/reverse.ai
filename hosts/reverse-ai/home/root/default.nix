@@ -15,12 +15,10 @@
   ];
 
   home.file = {
-    ".config/opencode/skills" = {
-      source = dotfiles/opencode/skills;
+    ".config/opencode" = {
+      source = dotfiles/opencode;
       recursive = true;
     };
-    ".config/opencode/opencode.jsonc".source = dotfiles/opencode/opencode.jsonc;
-    ".config/opencode/oh-my-openagent.jsonc".source = dotfiles/opencode/oh-my-openagent.jsonc;
     ".bash_profile".source = dotfiles/bash_profile;
   };
 
