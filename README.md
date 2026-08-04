@@ -40,3 +40,4 @@ mkdir -p ~/tmp && cd ~/tmp
 Behavior analysis
 - [ ] kunai / chainsaw / hayabusa / zircolite / 
 - [ ] emulators
+  - speakeasy example -> https://auteqia.garden/posts/articles/maldev/early-bird-apc-injection/
